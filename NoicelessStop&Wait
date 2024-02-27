@@ -13,7 +13,7 @@ void receiver();
 void sender(){
     printf("\nEnter number of packets :");
     scanf("%d", &numofPacket);
-
+    
     int packet[numofPacket];
 
     printf("\nEnter packets : ");
@@ -29,7 +29,7 @@ void sender(){
 
     printf("\nTheoretically time taken to transmit %d number of packets should be %f", numofPacket, numofPacket*2*(tt+tp));
     printf("\n");
-
+    
     for(i = 0; i < numofPacket; i++){
         time += tt;
         printf("\nTime taken to transmit '%d' at %f is ", packet[i], time);
@@ -44,7 +44,7 @@ void receiver(){
     time += tp;
     printf("\nPacket received at %f", time);
     time += tt;
-    printf("\n Acknowledgement sent at %f", time);
+    printf("\nAcknowledgement sent at %f", time);
     time += tp;
     printf("\n");
 }
